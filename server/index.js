@@ -1,4 +1,13 @@
 import http from "http";
-import { WebSocketServer } from "ws";
+import setUpWebsocketServer from "./ws/wsControllers/wsServer.js";
 
-const httpServer=http.createServer();
+const server=http.createServer();
+
+
+setUpWebsocketServer(server);
+
+
+
+server.listen(8080,()=>{
+    console.log("Server Listening at Port 8080");
+})
