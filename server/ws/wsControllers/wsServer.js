@@ -22,7 +22,7 @@ const setUpWebsocketServer=(server)=>{
           }
       };
       
-      connection.on("message",message=>handleMessage(message,uuid,users));
+      connection.on("message",message=>handleMessage(message,uuid,users,connections));
       
       connection.on("close",()=>handleClose(uuid,connections,users));
           
