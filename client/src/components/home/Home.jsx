@@ -21,7 +21,7 @@ function Home({ username }) {
                const user=users[uuid];
                return(  
              <li>
-                 <p>{users.username}</p>
+                 <p>{user.username}</p>
                  <p>Position X-cordinate : {user.state.x}  Y-cordinate : {user.state.y}</p>
              </li>
                )
